@@ -6,8 +6,8 @@ metadata:
 spec:
   project: argocd #default
   source:
-    repoURL: https://github.com/rasenmic/argocd-trial
-    path: projects/
+    repoURL: https://github.com/rasenmic/gitops-trial
+    path: argocd/projects/
     targetRevision: 'main'
     directory:
       recurse: true
