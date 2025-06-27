@@ -9,11 +9,12 @@ spec:
     server: https://kubernetes.default.svc
   project: apps
   source:
+    chart: httpbin
     repoURL: https://github.com/rasenmic/gitops-trial
-    path: apps/httpbin/staging
+    path: charts/
     targetRevision: main
-    directory:
-      recurse: true
+    helm:
+      releaseName: httbin
   syncPolicy:
     automated:
       prune: true
