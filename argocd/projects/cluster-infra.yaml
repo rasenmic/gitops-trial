@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: apps
+  name: cluster-infra
   namespace: argocd
 spec:
-  description: projects for applications
+  description: projects for cluster infrastructure
   destinations:
-    - namespace: 'apps'
+    - namespace: '*'
       server: https://kubernetes.default.svc
   clusterResourceWhitelist:
     - group: '*'
@@ -14,4 +14,10 @@ spec:
   sourceRepos:
     -  https://github.com/rasenmic/gitops-trial
   sourceNamespaces:
-    - 'apps'
+    - argocd
+  namespaceResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
