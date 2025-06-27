@@ -11,8 +11,8 @@ spec:
   source:
     chart: httpbin
     repoURL: https://github.com/rasenmic/gitops-trial
-    path: charts/httpbin/
-    targetRevision: HEAD
+    path: charts/
+    targetRevision: main
     helm:
       releaseName: httpbin
       valueFiles:
