@@ -4,7 +4,7 @@ metadata:
   name: projects
   namespace: argocd
 spec:
-  project: argocd #default
+  project: default #argocd
   source:
     repoURL: https://github.com/rasenmic/gitops-trial
     path: argocd/projects/
