@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: httpbin
-  namespace: apps
+  namespace: argocd # apps # this must be configured for argocd, otherwise it won't pick it up
 spec:
   destination:
     namespace: apps
