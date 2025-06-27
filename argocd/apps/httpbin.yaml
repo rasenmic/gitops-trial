@@ -9,9 +9,9 @@ spec:
     server: https://kubernetes.default.svc
   project: apps
   source:
-    chart: httpbin
+    #chart: httpbin
     repoURL: https://github.com/rasenmic/gitops-trial
-    path: charts/
+    path: charts/httpbin
     targetRevision: main
     helm:
       releaseName: httpbin
