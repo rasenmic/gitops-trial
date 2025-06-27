@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: apps
+  namespace: argocd
+spec:
+  description: projects for applications
+  destinations:
+    - namespace: 'apps'
+      server: https://kubernetes.default.svc
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  sourceRepos:
+    -  https://github.com/rasenmic/gitops-trial
+  sourceNamespaces:
+    - '*'

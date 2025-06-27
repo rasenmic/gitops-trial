@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: httpbin
+  namespace: apps
+spec:
+  destination:
+    namespace: apps
+    server: https://kubernetes.default.svc
+  project: apps
+  source:
+    repoURL: https://github.com/rasenmic/gitops-trial
+    path: apps/httpbin/staging
+    targetRevision: main
+    directory:
+      recurse: true
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
