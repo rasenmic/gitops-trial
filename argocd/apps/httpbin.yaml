@@ -14,7 +14,7 @@ spec:
     path: charts/httpbin
     targetRevision: main
     helm:
-      releaseName: httbin
+      releaseName: httpbin
   syncPolicy:
     automated:
       prune: true
